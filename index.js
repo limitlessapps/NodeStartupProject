@@ -31,6 +31,6 @@ mongoose.connect('mongodb://localhost:27017/myapp',
         useCreateIndex: true,
         useNewUrlParser: true
     }
-    , function () {
+    , function () { 
         console.log("App connected success")
     });
