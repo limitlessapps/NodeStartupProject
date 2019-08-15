@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const userRoutes = require("./routes/UsersRoutes");
+const taskRoutes = require('./routes/TaskRoute')
 
 //=====================================================================App use
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
@@ -22,6 +23,8 @@ const server = app.listen(app.get('port'), function () {
 
 //===================================================================== routes
 app.use("/api", userRoutes);
+app.use("/api", taskRoutes);
+
 
 
 
