@@ -23,4 +23,4 @@ const taskSchema = new Schema({
     participants: [{ type: Schema.Types.ObjectId, ref: 'User', required: true }],
 });
 
-module.exports = mongoose.model('Talk', taskSchema);
+module.exports = mongoose.model('Task', taskSchema);

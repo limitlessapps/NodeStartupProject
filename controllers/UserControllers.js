@@ -16,7 +16,7 @@ exports.signup = (req,res,next) =>{
 
             user.save()
             .then(
-                () => {
+                (user) => {
                     res.status(200).json({ user
                         // message:"User added successfully"
                     });

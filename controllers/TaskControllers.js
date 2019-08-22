@@ -28,10 +28,12 @@ exports.getTask = (req, res, next) => {
         .populate({ path: "created_by", model: "User" })
         .populate({ path: "responsible_person", model: "User" })
         .populate({ path: "participants", model: "User" })
-        .then(task => {
+        .then(
+            task => {
             res.status(200).json(task);
-        }).catch(
-            (error) => {
+        }
+        ).catch(
+            error => {
                 res.status(400).json({
                     error: error
                 });
