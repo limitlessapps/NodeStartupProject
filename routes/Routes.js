@@ -9,5 +9,7 @@ router.post('/login', userController.login);
 router.get('/Users', userController.getAllIntern);
 router.post('/task', taskController.createTask);
 router.get('/gettask', taskController.getTask);
+router.patch('/task/:id',taskController.modifyTask);
+router.delete('deletetask/:id',taskController.deleteTask);
 
 module.exports = router;
